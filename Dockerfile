@@ -1,10 +1,10 @@
-FROM alpine:3.7
+FROM alpine:latest
 
 LABEL maintainer="Hex <hex@codeigniter.org.cn>"
 
-ENV NGINX_VERSION 1.12.2
-ENV DEVEL_KIT_MODULE_VERSION 0.3.0
-ENV LUA_MODULE_VERSION 0.10.13
+ENV NGINX_VERSION 1.19.4
+ENV DEVEL_KIT_MODULE_VERSION 0.3.1
+ENV LUA_MODULE_VERSION 0.10.19
 ENV LIBSASS_VERSION 3.5.4
 
 ENV LUAJIT_LIB=/usr/lib
@@ -33,7 +33,7 @@ RUN addgroup -S nginx \
        gd-dev \
        geoip-dev \
        luajit-dev \
-    && curl -fSL https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -o nginx.tar.gz \
+    && curl -fSL https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz -o nginx.tar.gz
     && curl -fSL https://github.com/simplresty/ngx_devel_kit/archive/v$DEVEL_KIT_MODULE_VERSION.tar.gz -o ndk.tar.gz \
     && curl -fSL https://github.com/openresty/lua-nginx-module/archive/v$LUA_MODULE_VERSION.tar.gz -o lua.tar.gz \
     && curl -fSL https://github.com/sass/libsass/archive/$LIBSASS_VERSION.tar.gz -o libsass.tar.gz \

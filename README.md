@@ -1,8 +1,10 @@
+I am trying to update this to current versions
+
 # Nginx with Lua module for Docker
 
 Base on Alpine Nginx with Lua module, and support sass language.
 
-Nginx version: 1.12.2
+Nginx version: 1.19.4
 
 SASS version: 3.5.4
 
